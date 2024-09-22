@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: yuapi-back-dupli
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://42.194.158.197:3306/yuapi
+    username: yuapi
+    password: 12345678
+  # redis 配置
+  redis:
+    port: 6379
+    host: 42.194.158.197
+    database: 2
+    password: 12345678
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+#  yuapi配置仅供测试，实际会根据登录用户的id获取ak和sk
+yuapi:
+  client:
+    access-key: yupi
+    secret-key: abcdefgh
+dubbo:
+  application:
+    name: dubbo-springboot-demo-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address: nacos://42.194.158.197:8848
