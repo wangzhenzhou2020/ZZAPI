@@ -25,7 +25,7 @@
 ///**
 // * 帖子接口
 // *
-// * @author yupi
+// * 
 // */
 //@RestController
 //@RequestMapping("/post")
